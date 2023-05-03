@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <link href="./login.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/09d8ff6fff.js" crossorigin="anonymous"></script>
+    <title>Criar Conta</title>
+
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="https://unpkg.com/jwt-decode/build/jwt-decode.js"></script>
+    <script src="login.js"></script>
+
+    <script>
+        function handleCredentialResponse(response) {
+            const data = jwt_decode(response.credential)
+
+            fullName.textContent = data.name
+            sub.textContent = data.sub
+            given_name.textContent = data.given_name
+            family_name.textContent = data.family_name
+            email.textContent = data.email
+            verifiedEmail.textContent = data.email_verified
+            picture.setAttribute("src", data.picture)
+        }
+        window.onload = function () {
+            google.accounts.id.initialize({
+                client_id: "510875868065-o3mrh30tqqku9ckq8v1r6psban0hdqfl.apps.googleusercontent.com",
+                callback: handleCredentialResponse
+            });
+            google.accounts.id.renderButton(
+                document.getElementById("buttonDiv"),
+                {
+                    type: "icon",
+                    shape: "circle",
+                    theme: "outline",
+                    text: "signin_with.",
+                    size: "large"
+                }  // customization attributes
+            );
+            google.accounts.id.prompt(); // also display the One Tap dialog
+        }
+    </script>
+
+</head>
+
+
+<div class="container" id="container">
+    <div class="form-container sign-up-container">
+        <!-- <form action="#">
+            <h1>Create Account</h1>
+            <div class="social-container">
+                <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <span>or use your email for registration</span>
+            <input type="text" placeholder="Name" />
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Password" />
+            <button>Sign Up</button>
+        </form> -->
+    </div>
+    <div class="form-container sign-in-container">
+        <form action="#">
+            <h1>Criar Conta</h1>
+            <br>
+            <div id="buttonDiv"></div>
+            <br>
+            <span>Ou cria uma conta através do e-mail</span>
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Password" />
+            <p>Já tens conta? <a href="login.html">Inicia Sessão</a> <!-- TENHO DE MUDAR O HREF - ALTERAÇÃO2-->
+                <button>Criar Conta</button>
+                <br>
+                <small style="font-size: 10px;">Ao criar conta concorda com os Termos e Serviços</small>
+
+                <!--
+              <label>
+                <small style="font-size: 12px;">Ainda não tem conta?</small>
+              </label>
+              <button>Criar Conta</button>
+
+            -->
+        </form>
+
+    </div>
+
+    <div class="overlay-container">
+        <div class="overlay-panel overlay-left">
+            <img src="../images/loginPhoto.png" alt=”Image” style="max-width: fit-content;">
+        </div>
+        <!--
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Welcome Back!</h1>
+				<p>To keep connected with us please login with your personal info</p>
+				<button class="ghost" id="signIn">Sign In</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Hello, Friend!</h1>
+				<p>Enter your personal details and start journey with us</p>
+				<button class="ghost" id="signUp">Sign Up</button>
+			</div>
+		</div>
+	</div>
+    -->
+
+    </div>
+
+    <script src="login.js"></script>
+
+</html>

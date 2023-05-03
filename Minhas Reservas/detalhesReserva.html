@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>As minhas reservas</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <link rel="shortcut icon" href="../images/logo.png" style="width: max-content;">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+  <!-- tipo de letra -->
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+
+
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet">
+
+  <script src="minhasReservas.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"
+    integrity="sha512-WPtdqlctM92AaJX50S+bnz4rqfUb24D4ov/f4Q4J/n4j+LOeGNL8gJt9h3Kn/RsIUm1s2tTJgWfTTcMDHkGJjg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <link rel="stylesheet" href="../fonts/icomoon/style.css">
+  <link rel="stylesheet" href="../fonts/flaticon/font/flaticon.css">
+
+  <link rel="stylesheet" href="../css/tiny-slider.css">
+  <link rel="stylesheet" href="../css/aos.css">
+
+
+  <link rel="stylesheet" href="minhasReservas.css">
+
+  <script src="https://kit.fontawesome.com/09d8ff6fff.js" crossorigin="anonymous"></script>
+
+
+
+</head>
+
+<body>
+
+  <!--NAVIGATION BAR-->
+
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="../images/logoActivities4all.png" alt="Your Image" style="height: 100px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link " href="#">Recintos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="#minhasReservas">Minhas Reservas</a>
+          </li>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <li class="nav-item">
+
+            <div class="image-container">
+              <img class="fotoPerfil" src="../images/person_1-min.jpg" id="image">
+              <div class="dropdown">
+                <ul>
+                  <li>
+                    <span class="label-label-perfil" style="font-size: 14px; margin-top: 10px; text-align: center;"><img
+                        class="fotoPerfil2" src="../images/person_1-min.jpg" id="image">&emsp; Ricardo Vaz</span>
+                  </li>
+                  <li><a href="">Dados Pessoais</a></li>
+                  <li><a href="">Terminar Sessão</a></li>
+                </ul>
+              </div>
+            </div>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <br><br>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="grid-container">
+    <div class="col-md-12">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-1"> </div>
+          <div class="col-lg-7">
+            <div id="detalhes">
+              <h3>Detalhes de Reserva</h3>
+              <h4 id="nomeRecinto"></h4>
+              <p id="localizacaoRecinto"></p>
+              <p id="estrelasRecinto"></p>
+            </div>
+
+            <div>
+              <br>
+              <p class="tituloEsquerdo">Estado da Reserva:</p>
+              <table id="estadoReserva">
+                <tbody>
+                  <tr>
+                    <td> <i class="fa-regular fa-calendar"></i> Data reserva: <span id="dataReservaNoEstado"></span></td>
+                    <td> <i class="fa-sharp fa-solid fa-circle-info"></i> Tipo de campo: indoor</td>
+                  </tr>
+                  <tr>
+                    <td> <i class="fa-regular fa-clock"></i> Hora reserva : 22:00 - 23:00</td>
+                    <td> <i class="fa-solid fa-broom-ball"></i> Tipo de piso: Madeira</td>
+                  </tr>
+                  <tr>
+                    <td> <i class="fa-solid fa-house"></i> Modalidade: Football 7</td>
+                    <td> <i class="fa-sharp fa-solid fa-basket-shopping"></i> Requisição de material: Sim</td>
+                  </tr>
+                </tbody>
+              </table>
+
+
+
+
+              <br><br>
+              <p class="tituloEsquerdo">Comodidades:</p>
+              <table id="estadoReserva">
+                <tbody>
+                  <tr>
+                    <td> <i class="fa-sharp fa-solid fa-restroom"></i> Balneários</td>
+                    <td> <i class="fa-sharp fa-solid fa-shower"></i> Chuveiros</td>
+                  </tr>
+                  <tr>
+                    <td> <i class="fa-sharp fa-solid fa-p"></i> Parque estacionamento</td>
+                    <td> <i class="fa-sharp fa-solid fa-wheelchair"></i> Acessos mobilidade reduzida</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <br><br>
+              <p class="tituloEsquerdo">Sobre este campo:</p>
+              <p class="conteudoEsquerdo">
+                &emsp; Apenas alugueres para futsal. Alugueres que se destinem a outras modalidades serão recusados.
+              </p>
+              <p class="conteudoEsquerdo">
+                &emsp; Acesso ao campo é feito pela porta das traseiras.</p>
+              <p class="conteudoEsquerdo">
+                &emsp; Access to the field is made through the back door. </p>
+
+
+
+              <div class="image-row">
+                <img class="imgCampos" src="../images/campo futebol.jpg">
+                <img class="imgCampos" src="../images/campo-real.jpg">
+
+
+                <div style="position: relative;">
+                  <img class="imgCampos" src="../images/campo_paginaPrincipal.png" alt="Example Image" id="example-img">
+                  <div
+                    style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 15px; ">
+                    Ver Mais
+                  </div>
+                </div>
+
+
+                <div id="modaal">
+                  <div class="modaal-content">
+                    <span class="close">&times;</span>
+                    <img class="imgCampos" src="../images/campo futebol.jpg">
+                    <img class="imgCampos" src="../images/campo-real.jpg">
+                    <img class="imgCampos" src="../images/campo futebol.jpg">
+                    <img class="imgCampos" src="../images/campo-real.jpg">
+                    <img class="imgCampos" src="../images/campo futebol.jpg">
+                    <img class="imgCampos" src="../images/campo-real.jpg">
+                    <img class="imgCampos" src="../images/campo futebol.jpg">
+                    <img class="imgCampos" src="../images/campo-real.jpg">
+                    <img class="imgCampos" src="../images/campo futebol.jpg">
+                    <img class="imgCampos" src="../images/campo-real.jpg">
+                    <img class="imgCampos" src="../images/campo futebol.jpg">
+                    <img class="imgCampos" src="../images/campo futebol.jpg">
+                    <img class="imgCampos" src="../images/campo-real.jpg">
+                    <img class="imgCampos" src="../images/campo futebol.jpg">
+                    <img class="imgCampos" src="../images/campo-real.jpg">
+                  </div>
+                </div>
+              </div>
+
+
+              <p class="tituloEsquerdo">Endereço:</p>
+              <p class="conteudoEsquerdo">
+                &emsp; Ir buscar a localização
+              <p>
+                <br>
+                &emsp;
+                <button class="label-label-endereco" id="direcoesMaps" onclick="openMap()">Open Google Maps</button>
+                <span class="label-label-endereco">Copiar</span>
+              </p>
+              
+
+              <!--METER AS REVIEWS AQUI-->
+
+              <br><br>
+              <p class="tituloEsquerdo">Regras:</p>
+              <p class="conteudoEsquerdo">
+                &emsp; <i class="fa-solid fa-arrow-right"></i> Proibidos pitões de alumínio
+              </p>
+              <p class="conteudoEsquerdo">
+                &emsp; <i class="fa-solid fa-arrow-right"></i> Proibido fumar no recinto
+              </p>
+              <p class="conteudoEsquerdo">
+                &emsp; <i class="fa-solid fa-arrow-right"></i> Proibido cuspir
+              </p>
+
+            </div>
+          </div>
+
+          <div class="col-lg-3">
+            <br><br>
+            <span class="label-label-warning-big">Pendente</span>
+
+            <br> <br>
+
+
+            <!--metodo pagamento-->
+            <div class="box-2">
+              <div class="box-inner-2">
+                <div>
+                  <p class="fw-bold" id="tituloPagamento">Pagamento</p>
+                  <div class="dis mb-3"> </div>
+                </div>
+
+                <div class="mb-3">
+                  <p class="dis mb-2">433 Footbar</p>
+                  <p class="dis mb-2">27 Março 2023, Segunda-feira</p>
+                  <p class="dis mb-2" style="color:#777777; font-size: 11px;">Futebol 5 </p>
+
+
+
+
+
+
+
+
+
+
+
+
+                  <hr style="border-top: 1px solid black;">
+                </div>
+                <div>
+                  <div class="d-flex flex-column dis">
+
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                      <p>23:00 - 23:30</p>
+                      <p><span class="fas fa-euro-sign"></span>23.00</p>
+                    </div>
+
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                      <p>23:30 - 00:00</p>
+                      <p><span class="fas fa-euro-sign"></span>23.00</p>
+                    </div>
+
+                    <hr style="border-top: 1px solid black; margin-top: 0px;">
+
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                      <p>Coletes</p>
+                      <p><span class="fas fa-euro-sign"></span>2.00</p>
+                    </div>
+
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                      <p>Cones</p>
+                      <p><span class="fas fa-euro-sign"></span>1.40</p>
+                    </div>
+
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                      <p>Garrafas</p>
+                      <p><span class="fas fa-euro-sign"></span>5.00</p>
+                    </div>
+
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                      <p>Bola</p>
+                      <p style="color: #777777">GRATUITO</p>
+                    </div>
+
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                      <p>Rede</p>
+                      <p style="color: #777777">GRATUITO</p>
+                    </div>
+
+                    <div class="my-3">
+                      <p class="dis fw-bold mb-2">Código Promocional</p>
+
+
+                      <input type="text" id="discount-code-input" style="border-radius: 10px;">
+                      <button id="desconto" onclick="applyDiscount()">Aplicar</button>
+                      <div id="discount-info-message"></div>
+
+                    </div>
+
+
+
+
+
+
+
+
+                    <hr style="border-top: 1px solid black;">
+
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                      <div class="d-flex align-items-center">
+                        <p class="pe-2">Código
+                          <span
+                            class="d-inline-flex align-items-center justify-content-between bg-light px-2 couponCode">
+                            <span id="code" class="pe-2"></span>
+                            <span class="fas fa-times close"></span> </span>
+                        </p>
+                      </div>
+                      <p><span class="fas fa-euro-sign"></span>5.00</p>
+                    </div>
+
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                      <p class="fw-bold">Total</p>
+                      <p class="fw-bold"><span class="fas fa-euro-sign"></span>3.40</p>
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+
+
+
+
+
+
+            <!-- cancelar reserva -->
+            <br>
+            <div class="accordion">
+              <div class="accordion-section">
+                <div class="accordion-header" onclick="toggleAccordion(event)"> CANCELAR RESERVA </div>
+                <div class="accordion-content">
+
+
+                  <div class="box-2">
+                    <div class="box-inner-2">
+                      <div>
+                        <p class="fw-bold" id="tituloCancelarReserva">A sua reserva</p>
+                        <div class="dis mb-3"> </div>
+                      </div>
+
+                      <div class="mb-3">
+                        <p class="dis mb-2">433 Footbar</p>
+                        <p class="dis mb-2">27 Março 2023, Segunda-feira</p>
+                        <p class="dis mb-2" style="color:#777777; font-size: 11px;">Futebol 5 </p>
+                      </div>
+                      <div>
+                        <div class="d-flex flex-column dis">
+
+                          <div class="d-flex align-items-center justify-content-between mb-2">
+                            <p class="fw-bold">Total a reembolsar</p>
+                            <p class="fw-bold"><span class="fas fa-euro-sign"></span>3.40</p>
+                          </div>
+                          <hr style="border-top: 1px solid black; padding-top: 0%; margin-top: 0%" ;>
+
+                          <div class="d-flex align-items-center justify-content-between mb-2">
+                            <p class="fw-bold">Método de reembolso</p>
+                          </div>
+
+                          <div class="d-flex align-items-center mb-2">
+                            <input type="radio" id="transferencia" name="options" value="option1">
+                            <label for="transferencia"> Transferência Bancária</label>
+                          </div>
+
+                          <div class="d-flex align-items-center mb-2 ">
+                            <input type="radio" id="mbway" name="options" value="option2">
+                            <label for="mbway"> MB Way</label>
+                          </div>
+                          <div id="result" style="color: green ;"></div>
+                          <br>
+                          <span class="label-label-confirmar">Confirmar</span>
+
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="col-sm-1"> </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+  <br><br><br><br><br><br><br><br><br><br>
+
+  <!--FOOTER COMEÇA AQUI-->
+
+  <div class="rodape">
+    <footer>
+      <div class="conteudo-rodape">
+        <div class="row">
+          <div class="col-sm-4"
+            style="display: inline-block; vertical-align: middle; text-align: center; margin-left: calc(50% - [text width]/2);">
+            <img src="../images/logoblack.png" alt="Your Image" style="height: 80px;">
+          </div>
+          <div class="col-sm-4"
+            style="display: inline-block; text-align: center; margin-left: calc(50% - [text width]/2);">
+            <p class="titulo-rodape">Área Cliente</p>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">A sua Conta</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Reservas</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Registo/ Entrar</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-4"
+            style="display: inline-block; text-align: center; margin-left: calc(50% - [text width]/2);">
+            <p class="titulo-rodape">Ajuda</p>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Contacte-nos</a> </li>
+              <li class="nav-item mb-2"><i class="fa-brands fa-facebook fa-xl"></i> <i
+                  class="fa-brands fa-linkedin fa-xl"></i> <i class="fa-brands fa-instagram fa-xl"></i> <i
+                  class="fa-brands fa-twitter fa-xl"></i> <i class="fa-brands fa-reddit fa-xl"></i></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!--FOOTER ACABA AQUI-->
+
+
+
+
+
+  <script src="detalhesReservas.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"
+    integrity="sha512-WPtdqlctM92AaJX50S+bnz4rqfUb24D4ov/f4Q4J/n4j+LOeGNL8gJt9h3Kn/RsIUm1s2tTJgWfTTcMDHkGJjg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>

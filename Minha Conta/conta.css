@@ -1,0 +1,258 @@
+/*Navbar*/
+
+
+.navbar-custom li a {
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+
+}
+
+.navbar-custom li a:hover {
+  color: white;
+  font-weight: bold;
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: center;
+  grid-template-rows: center;
+  justify-items: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.col-md-12 {
+  background-color: #fff;
+  text-align: center;
+}
+
+
+.label-label-warning {
+  /* warning é pendente */
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: #ffefca;
+  font-weight: bold;
+  color: #bc3803;
+  font-size: 11px;
+}
+
+.label-label-success {
+  /* success é aprovado */
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: #d9fbd0;
+  font-weight: bold;
+  color: #195c09;
+  font-size: 11px;
+}
+
+.label-label-danger {
+  /* danger é cancelado */
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: #ff101054;
+  font-weight: bold;
+  color: #841400;
+  font-size: 11px;
+}
+
+
+.label-label-default {
+  /* default é efetuado */
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: #d3d3d3;
+  font-weight: bold;
+  color: #696969;
+  font-size: 11px;
+}
+
+.label-label-perfil {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: #205245;
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 11px;
+  width: 160px;
+  vertical-align: middle;
+}
+
+
+.i {
+  color: green;
+}
+
+.navbar-custom {
+  width: 100%;
+  background-color: #239334;
+  /*mudar isto aqui para o toggle ficar certinho qnd diminui o separador*/
+  height: 80px;
+  padding-left: 130px;
+  padding-right: 130px;
+
+}
+
+.imgFuncionarios {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.fotoPerfil {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%
+}
+
+.fotoPerfil2 {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  position: relative;
+  right: 10px;
+}
+
+.navbar-nav {
+  align-items: center;
+}
+
+.zoom {
+  zoom: 69.7%;
+  /* Adjust the zoom percentage as needed */
+}
+
+.image-container {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  display: none;
+}
+
+.dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(to bottom, #2a9134, #1E6B25);
+  text-decoration: none;
+  /* Não consigo tirar o sublinhado do dropdown */
+  width: 180px;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 15px;
+  color: white;
+  outline: none;
+  border-bottom: none;
+  border-radius: 10%;
+
+
+}
+
+.dropdown ul li {
+  padding: 5px;
+}
+
+
+.image-container:hover .dropdown {
+
+  display: block;
+}
+
+#colunaperfil {
+
+  background-color: #2a9134c7;
+  height: 100%;
+  text-align: center;
+
+}
+
+
+#imagemfunc {
+
+  margin-top: 100px;
+  width: 30%;
+  height: auto;
+  border-radius: 50%;
+
+
+}
+
+.textgreenback {
+
+  color: rgb(255, 255, 255);
+
+}
+
+.nome {
+
+
+  padding: 20px;
+
+}
+
+.terminarSessao {
+
+
+
+  padding-top: 130px;
+
+
+}
+
+.eliminarconta {
+  padding-bottom: 250px;
+}
+
+a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.col-9 {
+  padding-top: 100px;
+  padding-left: 140px;
+  background-color: #f8f8f8;
+}
+
+
+.Alterarpass {
+
+  color: black;
+  padding-right: 140px;
+}
+
+.row {
+
+  --bs-gutter-x: 0rem;
+}
+
+.risca {
+
+  border: none;
+  border-bottom: 2px solid black;
+  margin-right: 7%;
+
+}
+
+.editando {
+  padding-left:0.5%;
+  padding-right:0.5%;
+  color: white;
+  border: 1px solid rgb(0, 0, 0);
+
+  background-color: #2a9134c7;
+}

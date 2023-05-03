@@ -1,0 +1,1379 @@
+/*
+
+NOTAS:
+. é classe 
+# é id
+
+*/
+
+.iconNovaPage:hover {
+  animation-name: fade;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+.iconNovaPage {
+  color: #2A9134;
+}
+
+
+h3 {
+  font-family: Lucida Sans Unicode;
+  color: #205245;
+  font-weight: bold;
+  font-family: 'Work Sans', sans-serif;
+  text-align: left;
+}
+
+
+h4 {
+  font-family: Lucida Sans Unicode;
+  color: #2A9134;
+  font-weight: bold;
+  text-align: left;
+  font-family: 'Work Sans', sans-serif;
+}
+
+#localizacaoRecinto {
+  text-align: left;
+  font-size: 12px;
+  color: #888888;
+  font-family: 'Work Sans', sans-serif;
+}
+
+
+
+.cabecalho {
+  color: #2A9134;
+  background-color: #2a913444;
+  vertical-align: middle;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.table {
+  text-align: left;
+  border-radius: 50%;
+  font-size: small;
+  vertical-align: middle;
+  font-family: 'Work Sans', sans-serif;
+}
+
+
+th {
+  text-align: left;
+  font-size: medium;
+  font-family: 'Work Sans', sans-serif;
+  
+}
+
+
+
+/*Navbar*/
+
+
+.navbar-custom li a {
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+  font-family: 'Work Sans', sans-serif;
+
+}
+
+.navbar-custom li a:hover {
+  color: white;
+  font-weight: bold;
+  font-family: 'Work Sans', sans-serif;
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: center;
+  grid-template-rows: center;
+  justify-items: center;
+  align-items: center;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.col-md-12 {
+  background-color: #fff;
+  text-align: center;
+  font-family: 'Work Sans', sans-serif;
+}
+
+/* --------------------------------------------------------------------------------------------------LABELS*/
+.label-label-endereco {
+  /* warning é pendente */
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: #2A9134;
+  font-weight: bold;
+  color: white;
+  font-size: 11px;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.label-label-warning {
+  /* warning é pendente */
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: #ffefca;
+  font-weight: bold;
+  color: #bc3803;
+  font-size: 11px;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.label-label-success {
+  /* success é aprovado */
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: #d9fbd0;
+  font-weight: bold;
+  color: #195c09;
+  font-size: 11px;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.label-label-danger {
+  /* danger é cancelado */
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: #ff101054;
+  font-weight: bold;
+  color: #841400;
+  font-size: 11px;
+  font-family: 'Work Sans', sans-serif;
+}
+
+
+.label-label-default {
+  /* default é efetuado */
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: #d3d3d3;
+  font-weight: bold;
+  color: #696969;
+  font-size: 11px;
+  font-family: 'Work Sans', sans-serif;
+}
+
+
+.label-label-warning-big {
+  /* warning é pendente */
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: #ffefca;
+  font-weight: bold;
+  color: #bc3803;
+  font-size: 20px;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.label-label-success-big {
+  /* success é aprovado */
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: #d9fbd0;
+  font-weight: bold;
+  color: #195c09;
+  font-size: 11px;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.label-label-danger-big {
+  /* danger é cancelado */
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: #ff101054;
+  font-weight: bold;
+  color: #841400;
+  font-size: 11px;
+  font-family: 'Work Sans', sans-serif;
+}
+
+
+.label-label-default-big {
+  /* default é efetuado */
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: #d3d3d3;
+  font-weight: bold;
+  color: #696969;
+  font-size: 11px;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.label-label-perfil {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: #205245;
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 11px;
+  width: 160px;
+  vertical-align: middle;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.label-label-confirmar {
+  /* danger é cancelado */
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: #ff101054;
+  font-weight: bold;
+  color: #841400;
+  font-size: 11px;
+  font-family: 'Work Sans', sans-serif;
+  height: 30px;
+  width: 80px;
+  text-align: center;
+}
+
+
+/* --------------------------------------------------------------------------------------------------LABELS ENDS HERE*/
+
+.i {
+  color: green;
+}
+
+.navbar-custom {
+  width: 100%;
+  background-color: #239334;
+  /*mudar isto aqui para o toggle ficar certinho qnd diminui o separador*/
+  height: 80px;
+  padding-left: 130px;
+  padding-right: 130px;
+  font-family: 'Work Sans', sans-serif;
+
+}
+
+.navbar-nav {
+  align-items: center;
+}
+
+.imgFuncionarios {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.fotoPerfil {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%
+}
+
+.fotoPerfil2 {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  position: relative;
+  
+}
+
+
+
+
+
+.image-container {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  z-index: 1;
+  align-items: center;
+  text-align: center;
+  display: none;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(to bottom, #2a9134, #1E6B25);
+  text-decoration: none;
+  width: 180px;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 15px;
+  color: white;
+  outline: none;
+  border-bottom: none;
+  border-radius: 10%;
+  font-family: 'Work Sans', sans-serif;
+ 
+
+
+}
+
+.dropdown ul li {
+  padding: 5px;
+   align-items: center;
+   text-align: center;
+}
+
+
+.image-container:hover .dropdown {
+
+  display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* CSS FOOTER COMEÇA AQUI */
+
+.rodape {
+  background-color: rgba(68, 73, 79, 0.05);
+}
+
+.conteudo-rodape {
+  padding: 80px;
+  font-size: 13px;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.titulo-rodape {
+  font-size: 15px;
+  color: #2A9134;
+  font-weight: bold;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.rodape {
+  justify-items: center;
+  align-items: left;
+}
+
+/*css footer ends*/
+
+
+/*   ---------------------------------------CSS MINHAS RESERVAS----------------------------------*/
+
+#detalhes {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Work Sans', sans-serif; 
+}
+
+.fa {
+  font-size: 16px;
+  color: gold;
+  margin-right: 5px;
+  margin-bottom: 10px;
+
+}
+
+.rating {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+
+
+.button-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #eee;
+}
+
+
+/* imagens dos campos  */
+
+.image-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  padding-top: 20px;
+  padding-bottom: 6%;
+}
+
+.image-row img {
+  width: 200px;
+  height: 130px;
+  margin: 0;
+  padding: 0;
+  border-radius: 10px;
+}
+
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal img {
+  width: 200px;
+  height: 130px;
+  height: auto;
+  margin: auto;
+  display: block;
+}
+
+
+
+.close {
+  color: #fff;
+  float: right;
+  font-size: 30px;
+  font-weight: bold;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+.close:hover,
+.close:focus {
+  color: #f00;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+
+/* imagens dos campos ends here */
+
+
+/* css metodo pagamento*/
+
+
+.box-2 {
+  box-shadow: 0 0 3px #696969;
+  border-radius: 10px;
+}
+
+
+#tituloPagamento {
+  font-size: 17px;
+  text-align: left;
+  font-family: 'Work Sans', sans-serif;
+}
+
+
+.tituloEsquerdo {
+  font-size: 17px;
+  text-align: left;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: bold;
+}
+
+.conteudoEsquerdo {
+  font-size: 13px;
+  text-align: left;
+  font-family: 'Work Sans', sans-serif;
+  padding-top: 20px;
+}
+
+
+#estadoReserva {
+  text-align: left;
+  font-family: 'Work Sans', sans-serif;
+}
+
+
+
+
+#estadoReserva td,
+#estadoReserva th {
+  padding: 0 20px;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 13px;
+  /* espaçamento horizontal de 5 pixels */
+}
+
+#estadoReserva td:first-child,
+#estadoReserva th:first-child {
+  padding-left: 20px;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 13px;
+  /* remove o espaçamento à esquerda da primeira coluna */
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#estadoReserva td:last-child,
+#estadoReserva th:last-child {
+  padding-right: 20px;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 13px;
+  /* remove o espaçamento à direita da última coluna */
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: 'Work Sans', sans-serif;
+  text-align: left;
+}
+
+
+
+
+
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  overflow: hidden
+}
+
+
+.dis {
+  font-size: 12px;
+  font-weight: 500
+}
+
+.box-2 {
+  max-width: 450px;
+  padding: 10px 40px
+}
+
+.box-2 .box-inner-2 input.form-control {
+  font-size: 12px;
+  font-weight: 600
+}
+
+.box-2 .box-inner-2 .inputWithIcon {
+  position: relative
+}
+
+.box-2 .box-inner-2 .inputWithIcon span {
+  position: absolute;
+  left: 15px;
+  top: 8px
+}
+
+.box-2 .box-inner-2 .inputWithcheck {
+  position: relative
+}
+
+.box-2 .box-inner-2 .inputWithcheck span {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: green;
+  font-size: 12px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 15px;
+  top: 6px
+}
+
+.form-control:focus,
+.form-select:focus {
+  box-shadow: none;
+  outline: none;
+  border: 1px solid #2A9134
+}
+
+.border:focus-within {
+  border: 1px solid #2A9134 !important
+}
+
+.box-2 .card-atm .form-control {
+
+  border: none;
+  box-shadow: none
+}
+
+.form-select {
+  border-radius: 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px
+}
+
+.address .form-control.zip {
+  border-radius: 0;
+  border-bottom-left-radius: 10px
+}
+
+.address .form-control.state {
+  border-radius: 0;
+  border-bottom-right-radius: 10px
+}
+
+
+.box-2 .box-inner-2 .btn.btn-outline-primary {
+  width: 120px;
+  padding: 10px;
+  font-size: 11px;
+  padding: 0% !important;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 0;
+  background-color: whitesmoke;
+  color: black;
+  font-weight: 600
+}
+
+.box-2 .box-inner-2 .btn.btn-primary {
+  background-color: #2A9134;
+  color: whitesmoke;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  justify-content: center;
+  border: none;
+  padding: 10px
+}
+
+/*
+.box-2 .box-inner-2 .btn.btn-primary:hover {
+  background-color: #2A9134
+}
+
+.box-2 .box-inner-2 .btn.btn-primary .fas {
+  font-size: 13px !important;
+  color: whitesmoke
+}*/
+
+
+/* css metodo pagamento ends aqui*/
+
+
+
+
+/*  CANCELAR REESERVA */
+
+#tituloCancelarReserva {
+  font-size: 15px;
+  text-align: left;
+  font-family: 'Work Sans', sans-serif;
+}
+
+
+
+
+
+
+
+.accordion-header {
+  background-color: #CF2500;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  background-image: url('closed-icon.png');
+  background-repeat: no-repeat;
+  background-position: right center;
+  border-radius: 10px;
+}
+
+.accordion-content {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+
+
+.accordion-header.open {
+  background-image: url('open-icon.png');
+}
+
+.accordion-header:before {
+  content: "+";
+  float: right;
+  margin-right: 5px;
+
+}
+
+.accordion-header.open:before {
+  content: "-";
+
+}
+
+
+
+
+
+
+
+
+/*  CANCELAR REESERVA ENDS AQUI*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: 'Montserrat', sans-serif
+}
+
+
+p {
+  margin: 0%
+}
+
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  overflow: hidden
+}
+
+
+.dis {
+  font-size: 12px;
+  font-weight: 500
+}
+
+.box-2 {
+  max-width: 450px;
+  padding: 10px 40px
+}
+
+.box-2 .box-inner-2 input.form-control {
+  font-size: 12px;
+  font-weight: 600
+}
+
+.box-2 .box-inner-2 .inputWithIcon {
+  position: relative
+}
+
+.box-2 .box-inner-2 .inputWithIcon span {
+  position: absolute;
+  left: 15px;
+  top: 8px
+}
+
+.box-2 .box-inner-2 .inputWithcheck {
+  position: relative
+}
+
+.box-2 .box-inner-2 .inputWithcheck span {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: green;
+  font-size: 12px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 15px;
+  top: 6px
+}
+
+.form-control:focus,
+.form-select:focus {
+  box-shadow: none;
+  outline: none;
+  border: 1px solid #2A9134
+}
+
+.border:focus-within {
+  border: 1px solid #2A9134 !important
+}
+
+.box-2 .card-atm .form-control {
+  border: none;
+  box-shadow: none
+}
+
+.form-select {
+  border-radius: 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px
+}
+
+.address .form-control.zip {
+  border-radius: 0;
+  border-bottom-left-radius: 10px
+}
+
+.address .form-control.state {
+  border-radius: 0;
+  border-bottom-right-radius: 10px
+}
+
+.box-2 .box-inner-2 .btn.btn-outline-primary {
+  width: 120px;
+  padding: 10px;
+  font-size: 11px;
+  padding: 0% !important;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 0;
+  background-color: whitesmoke;
+  color: black;
+  font-weight: 600
+}
+
+.box-2 .box-inner-2 .btn.btn-primary {
+  background-color: #2A9134;
+  color: whitesmoke;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  justify-content: center;
+  border: none;
+  padding: 10px
+}
+
+.box-2 .box-inner-2 .btn.btn-primary:hover {
+  background-color: #2A9134
+}
+
+.box-2 .box-inner-2 .btn.btn-primary .fas {
+  font-size: 13px !important;
+  color: whitesmoke
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%
+}
+
+.carousel-inner {
+  width: 100%;
+  height: 200px
+}
+
+.carousel-item img {
+  object-fit: cover;
+  height: 100%
+}
+
+.carousel-control-prev {
+  transform: translateX(-50%);
+  opacity: 1
+}
+
+.carousel-control-prev:hover .fas.fa-arrow-left {
+  transform: translateX(-5px)
+}
+
+.carousel-control-next {
+  transform: translateX(50%);
+  opacity: 1
+}
+
+.carousel-control-next:hover .fas.fa-arrow-right {
+  transform: translateX(5px)
+}
+
+.fas.fa-arrow-left,
+.fas.fa-arrow-right {
+  font-size: 0.8rem;
+  transition: all .2s ease
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  background-color: #f8f9fa;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transform-origin: center;
+  opacity: 1
+}
+
+.fas.fa-times {
+  color: red
+}
+
+.fas,
+.fab {
+  color: #6d6c6d
+}
+
+::placeholder {
+  font-size: 12px
+}
+
+.couponCode {
+  text-transform: uppercase;
+  font-size: 0.7rem
+}
+
+#code {
+  pointer-events: none;
+  font-weight: 600
+}
+
+.close {
+  cursor: pointer
+}
+
+.info {
+  transform: translateX(-500px);
+  animation: moving 1.5s;
+  animation-fill-mode: forwards
+}
+
+.updates {
+  transform: translateX(-500px);
+  animation: moving 1.7s;
+  animation-fill-mode: forwards
+}
+
+.different {
+  transform: translateX(-500px);
+  animation: moving 1.9s;
+  animation-fill-mode: forwards
+}
+
+.black {
+  transform: translateX(-500px);
+  animation: moving 2.1s;
+  animation-fill-mode: forwards
+}
+
+.white {
+  transform: translateX(-500px);
+  animation: moving 2.3s;
+  animation-fill-mode: forwards
+}
+
+.pastel {
+  transform: translateX(-500px);
+  animation: moving 2.5s;
+  animation-fill-mode: forwards
+}
+
+.footer {
+  transform: translateX(-500px);
+  animation: moving 2.6s;
+  animation-fill-mode: forwards
+}
+
+@keyframes moving {
+  0% {
+    opacity: 0;
+    transform: translateX(-500px)
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px)
+  }
+}
+
+.box-2 {
+  transform: translateY(-500px);
+  animation: img-top 2s;
+  animation-fill-mode: forwards
+}
+
+.user {
+  transform: translateY(-500px);
+  animation: img-top 1.5s;
+  animation-fill-mode: forwards
+}
+
+.userdetails {
+  transform: translateY(-500px);
+  animation: img-top 2.0s;
+  animation-fill-mode: forwards
+}
+
+.imgdetails {
+  transform: translateY(-500px);
+  animation: img-top 1.5s;
+  animation-fill-mode: forwards
+}
+
+@keyframes img-top {
+  0% {
+    opacity: 0;
+    transform: translateY(-500px)
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px)
+  }
+}
+
+@media (max-width:768px) {
+  .container {
+    max-width: 700px;
+    margin: 10px auto
+  }
+
+  .box-1,
+  .box-2 {
+    max-width: 600px;
+    padding: 20px 90px;
+    margin: 20px auto
+  }
+
+  .box-2 {
+    transform: translateX(-500px);
+    animation: box-side 2.6s;
+    animation-fill-mode: forwards
+  }
+
+  @keyframes box-side {
+    0% {
+      opacity: 0;
+      transform: translateX(-500px)
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0px)
+    }
+  }
+}
+
+@media (max-width:426px) {
+
+  .box-1,
+  .box-2 {
+    max-width: 400px;
+    padding: 20px 10px
+  }
+
+  ::placeholder {
+    font-size: 9px
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Style the gallery thumbnails */
+.thumbnail {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+}
+
+/* Style the modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.9);
+}
+
+/* Style the modal content */
+.modal-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* Style the slides */
+.mySlides {
+  display: none;
+}
+
+/* Style the prev/next buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Position the prev button to the left */
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Position the next button to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Style the close button */
+.close {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* Style the current slide indicator */
+.numbertext {
+  display: inline-block;
+  color: white;
+  font-size: 12px;
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* LIXOOOOO PARA APAGAR ------------------------
+.accordion-header {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+
+.accordion-header.active, .accordion-header:hover {
+  background-color: #ccc;
+}
+
+
+.accordion-content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+
+.accordion-content.active {
+  display: block;
+}
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------------------------------- IMAGENS TODAS ABERTAS QUANDO CLICAMOS EM VER MAIS */
+/* Hide the modal by default */
+#modaal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Style the modal content */
+.modaal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 70%;
+  align-items: center;
+  
+}
+
+/* Style the close button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+/*-------------------------------------------------------------------- IMAGENS TODAS ABERTAS QUANDO CLICAMOS EM VER MAIS ENDS HERE */
+
+
+
+/* Pagamento */
+#desconto{
+  background-color: #2A9134;
+  color: white;
+  border: none;
+  padding: 2px 20px;
+  border-radius: 10px;
+}
+
+
+#desconto:hover {
+  box-shadow: 0 5px 0 #0d2d10;
+}
+
+

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exemplo de Time Picker</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.13.18/jquery.timepicker.min.css">
+  <script src="../bd/localStorage.js"></script>
+  <script>src="../bd/recintos.js"</script>
+
+
+</head>
+<body>
+  
+
+<div id="window_filtro">
+  <div class="row_window">
+    <div class="col-sm-2">
+      <div class="form-check">
+
+        <input class="form-check-input filtro-checkbox" type="checkbox" id="Sintético" pisoCampo="Sintético" value="Sintético">
+        <label class="form-check-label" for="SINTÉTICO">
+          RELVADO SINTÉTICO
+        </label>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input filtro-checkbox" type="checkbox" id="INDOOR" pisoCampo="Indoor" value="Indoor">
+        <label class="form-check-label" for="INDOOR">
+          INDOOR
+        </label>
+      </div>
+      <div class="button-container">
+  
+        <button class="button_window" onclick="filtrarRecintos()">APLICAR</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script>
+  
+  // Adiciona um evento de escuta a todas as caixas de seleção
+
+
+  // Adiciona um evento de escuta ao botão de aplicar filtro
+document.querySelector('#btnAplicarFiltro').addEventListener('click', function() {
+  // Obtém os valores selecionados nas caixas de seleção
+  var selectedValues = [];
+  document.querySelectorAll('.filtro-checkbox:checked').forEach(function(checkbox) {
+    selectedValues.push(checkbox.value);
+  });
+  
+  // Filtra os recintos com base nos valores selecionados
+  var filteredRecintos = [];
+  var recintos = JSON.parse(localStorage.getItem('recintos'));
+  recintos.forEach(function(recinto) {
+    if (selectedValues.indexOf(recinto.pisoCampo) !== -1) {
+      filteredRecintos.push(recinto);
+    }
+  });
+  
+  // Exibe os recintos filtrados
+  mostrarRecintos(filteredRecintos);
+});
+
+// Função para exibir os recintos na tela
+function mostrarRecintos(recintos) {
+  var recintosHtml = '';
+  recintos.forEach(function(recinto) {
+    recintosHtml += '<li>' + recinto.nome + '</li>';
+  });
+  document.getElementById('recintos-list').innerHTML = recintosHtml;
+}
+
+
+  </script>
+
+<script src="../bd/localStorage.js"></script>
+<script>src="../bd/recintos.js"</script>
+
+</body>
+</html>

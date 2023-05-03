@@ -1,0 +1,324 @@
+/*Para o hero (passar as imagens)*/
+.hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #00204a;
+  overflow: hidden;
+}
+
+.hero.overlay {
+  position: relative;
+}
+
+.hero.overlay:before {
+  background-color: rgba(0, 0, 0, 0.5);
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.hero,
+.hero>.container>.row {
+  height: 100vh;
+  min-height: 600px;
+}
+
+.hero.page-inner,
+.hero.page-inner>.container>.row {
+  height: 70vh;
+  min-height: 300px;
+}
+
+.hero>.container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero .heading {
+  color: #fff;
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.hero .lead {
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.hero .narrow-w {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.hero .form-search .form-control {
+  padding-top: 18px;
+  padding-bottom: 18px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: none;
+  border-radius: 30px;
+}
+
+
+.hero-slide {
+  top: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.hero-slide .img {
+  height: 100vh;
+  min-height: 600px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.hero-slide .img.overlay {
+  position: relative;
+}
+
+.hero-slide .img.overlay:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 1;
+  background: rgba(34, 34, 34, 0.4);
+}
+
+
+/*Navbar*/
+
+.navbar-custom {
+  width: 90%;
+  background-color: #239334;
+  border-radius: 10px;
+  position: absolute;
+  padding-left: 3%;
+  padding-right: 3%;
+  margin-top: 40px;
+  margin-inline-start: 5%;
+  z-index: 9;
+}
+
+.navbar-custom li a {
+  color: white;
+  font-size: 14px;
+
+}
+
+.navbar-custom li a:hover {
+  color: white;
+  font-weight: bold;
+}
+
+/*Para os icones das estrelas*/
+.fa {
+  font-size: 16px;
+  color: gold;
+  margin-right: 5px;
+  margin-bottom: 10px;
+
+}
+
+.rating {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+
+
+.button-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #eee;
+}
+
+/*Para os cartões com os campos*/
+.card {
+  border-radius: 30px;
+  border-width: 1px;
+
+}
+
+
+.card-modalidades {
+  border-radius: 5px;
+  border-color: transparent;
+  height: 250px;
+  margin-bottom: 27px;
+  margin: 10px;
+  text-align: center;
+  align-items: center
+}
+
+.rounded-top-custom {
+  border-top-left-radius: 7%;
+  border-top-right-radius: 7%;
+}
+
+
+/* Para as modalidades*/
+.modalidades {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  position: relative;
+  z-index: 8;
+  background-color: rgba(0, 32, 74, 0.05);
+}
+
+
+/*button*/
+
+.btn-light {
+  width: 163px;
+  height: 57px;
+  left: 511px;
+  top: -2px;
+  margin-left: 10px;
+
+  mix-blend-mode: normal;
+  border-radius: 30px;
+}
+
+.btn-success {
+  background-color: #28A745;
+  border-color: white;
+  border-radius: 30px;
+}
+
+/*h1,h2*/
+
+.text-blue {
+  padding-top: 30px;
+  font-family: 'Work Sans';
+  font-style: normal;
+  color: #00204a
+}
+
+.btn-primary {
+  background-color: #00204a;
+  border-color: white;
+  border-radius: 30px;
+}
+
+.btn-primary:hover{
+  background-color: #013170;
+}
+
+
+#modalidades h2,
+h5 {
+  color: #00204A;
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 500;
+}
+
+#modalidades h2,
+h5 {
+  color: #00204A;
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 500;
+}
+
+.container{
+  padding: 20px;
+  text-align: justify;
+}
+
+.container p{
+  text-align: start;
+}
+
+/*KPIS*/
+#kpis h1,h2{
+  color: #00204A;
+}
+
+#kpis span{
+  font-size: xx-large;
+  font-weight: bold;
+  color: #239334;
+}
+
+
+
+
+/*FAQS*/
+.faqs {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  position: relative;
+  z-index: 8;
+  background-color: rgba(0, 32, 74, 0.05);
+}
+
+.faqs h1,h5{
+  color: #00204A;
+  
+
+}
+
+#accordionFlushExample{
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+}
+
+.accordion-header{
+  border-radius: 30px;
+}
+
+/* Comentários Clientes*/
+
+#comentariosClientes h1,h5{
+  color: #00204A;
+  
+
+}
+
+#carousel-clientes h5{
+  color: #239334;
+}
+
+
+/*Contacte-nos*/
+.contatos{
+  background-color: rgba(0, 32, 74, 0.05)
+}
+.contatos h1, h5{
+  color: #00204A;
+}
+
+.contact-info{
+  padding-top: 30px;
+}
+
+.icon{
+  font-size: xx-large;
+  color: #00204A;
+}

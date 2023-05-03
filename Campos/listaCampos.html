@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="" />
+    <meta name="keywords" content="bootstrap, bootstrap5" />
+    <link rel="shortcut icon" href="../images/logo.png" style="width: max-content;">
+    <link rel="stylesheet" href="listaCampos.css">
+
+    <!--footer-->
+    <link href="../footer/footer.css" rel="stylesheet" />
+    <!--footer-->
+    <script src="../baseDados.js"></script>
+    <script type="module" src="../bd/localStorage.js"></script>
+<!--index-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="../fonts/icomoon/style.css">
+    <link rel="stylesheet" href="../fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="../css/tiny-slider.css">
+    <link rel="stylesheet" href="../css/aos.css">
+    <link rel="stylesheet" href="../css/principal.css">
+    <script src="https://kit.fontawesome.com/09d8ff6fff.js" crossorigin="anonymous"></script>
+    <script type="module" src="./bd/localStorage.js"></script>
+
+    <!--index-->
+
+    <!--calendario-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<!--calendario-->
+
+    <title>Lista de todos os campos</title>
+</head>
+
+<body>
+    <header>
+    <style>.navbar-custom {
+         width: 100%;
+         border-radius: 0px; 
+        padding-left: 0%;
+        padding-right: 0%;
+         margin-top: 0px; 
+        margin-inline-start: 0%; 
+
+    }</style>
+        <nav class="navbar navbar-expand-lg navbar-custom">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <img src="../images/logoActivities4all.png" alt="Your Image" style="height: 60px;">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+               
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                    <a class="nav-link " href="../index.html#recintos">Recintos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " href="../index.html#modalidades">Atividades</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link  " href="../index.html#faqs">FAQ's</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " href="../index.html#contatos">Contactos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " href="../Login/login.html">Log-in</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          
+<br><br>
+        <h5 style="text-align: center">Filtre os campos conforme as suas preferências!</h5>
+
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="campo_pesquisa" placeholder="Pesquisar...">
+                    <span class="input-group-btn pull-right">
+
+
+                        <button class="btn btn-limpar" type="button" id="btn-limpar"
+                            onclick="LimparPesquisaFiltro()">Limpar</button>
+
+
+                        <button class="btn btn-default" type="button" id="btn-data"
+                            onclick="toggleWindow(this)">DATA/HORA</button>
+
+                        <div id="window_data">
+                            <div class="row_window">
+                                <div class="col-sm-4">
+
+                                    <div class="form-group">
+                                        <label for="data" style=>Selecione uma data:</label>
+                                        <input type="text" class="form-control" id="data"
+                                            oninput="camposDisponibilidade()">
+                                    </div>
+                                    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+                                     
+
+                                    <script>
+                                        flatpickr("#data", {
+
+                                            appendTo: document.body,
+                                            theme: {
+                                                backgroundColor: "#00F078",
+                                                textColor: "#FFFFFF",
+                                            },
+                                        });
+                                    </script>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <h6>Escolha uma hora:</h6>
+
+                                    <label for="texto">Hora de início:</label>
+                                    <input type="text" id="textoHoraInicio"onblur="compararHoras()"oninput="camposDisponibilidade()" name="texto"
+                                        placeholder="Escolha a hora de início" list="horas" onclick="limparInput()">
+
+                                    <datalist id="horas">
+                                            <option value="9:00">
+                                            <option value="9:30"></option>
+                                            <option value="10:00">
+                                                <option value="10:30"></option>
+                                            <option value="11:00">
+                                                <option value="11:30"></option>
+                                            <option value="12:00">
+                                                <option value="12:30"></option>
+                                            <option value="13:00">
+                                                <option value="13:30"></option>
+                                            <option value="14:00">
+                                                <option value="14:30"></option>
+                                            <option value="15:00">
+                                                <option value="15:30"></option>
+                                            <option value="16:00">
+                                                <option value="16:30"></option>
+                                            <option value="17:00">
+                                                <option value="17:30"></option>
+                                            <option value="18:00">
+                                                <option value="18:30"></option>
+                                            <option value="19:00">
+                                                <option value="19:30"></option>
+                                            <option value="20:00">
+                                                <option value="20:30"></option>
+                                            <option value="21:00">
+                                                <option value="21:30"></option>
+                                            <option value="22:00">
+                                                <option value="22:30"></option>
+                                            <option value="23:00">
+                                                <option value="23:30"></option>
+                                            <option value="24:00">
+                                    </datalist>
+
+
+
+                                    <br>
+                                    <label for="texto">Hora de fim:</label>
+                                    <input type="text" id="textoHoraFim"onblur="compararHoras()"oninput="camposDisponibilidade()" name="texto"
+                                        placeholder="Escolha a hora de fim" list="horas" onclick="limparInput()">
+
+                                   
+                                </div>
+                                <div class="col-sm-4">
+                                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                                    <h6>Encontrar campos por disponibilidade</h6>
+                                    <div id="disponibilidade"></div>
+
+                                </div>
+                            </div>
+                            <div class="button-container">
+                                <button class="button_window" onclick="LimparFiltro()">LIMPAR</button>
+                                <button class="button_window" onclick="AplicarFiltro()">APLICAR</button>
+                            </div>
+                        </div>
+
+
+                        <button class="btn btn-default" type="button" id="btn-filtrar"
+                            onclick="toggleWindow(this)">FILTRAR</button>
+
+                        <div id="window_filtro" >
+                            <div class="row_window">
+                                <div class="col-sm-2">
+                                    <h6>COMPLEXO</h6>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="BRAGA">
+                                        <label class="form-check-label" for="BRAGA">
+                                            BRAGA
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="GUIMARÃES">
+                                        <label class="form-check-label" for="GUIMARÃES">
+                                            GUIMARÃES
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="PORTO">
+                                        <label class="form-check-label" for="PORTO">
+                                            PORTO
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="LISBOA">
+                                        <label class="form-check-label" for="LISBOA">
+                                            LISBOA
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="ALGARVE">
+                                        <label class="form-check-label" for="ALGARVE">
+                                            ALGARVE
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                    <h6>TIPO DE JOGO</h6>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="FUTEBOL">
+                                        <label class="form-check-label" for="FUTEBOL">
+                                            FUTEBOL
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="ANDEBOL">
+                                        <label class="form-check-label" for="ANDEBOL">
+                                            ANDEBOL
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="TENIS">
+                                        <label class="form-check-label" for="TENIS">
+                                            TENIS
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="PADEL">
+                                        <label class="form-check-label" for="PADEL">
+                                            PADEL
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="FUTSAL">
+                                        <label class="form-check-label" for="FUTSAL">
+                                            FUTSAL
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="BASQUETEBOL">
+                                        <label class="form-check-label" for="BASQUETEBOL">
+                                            BASQUETEBOL
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="NATAÇÃO">
+                                        <label class="form-check-label" for="NATAÇÃO">
+                                            NATAÇÃO
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="VOLEIBOL">
+                                        <label class="form-check-label" for="VOLEIBOL">
+                                            VOLEIBOL
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                    <h6>TIPO DE PISO</h6>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="NATURAL">
+                                        <label class="form-check-label" for="NATURAL">
+                                            RELVADO NATURAL
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="Sintético" pisoCampo="Sintético" value="Sintético">
+                                        <label class="form-check-label" for="SINTÉTICO">
+                                            RELVADO SINTÉTICO
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="ALCATRÃO">
+                                        <label class="form-check-label" for="ALCATRÃO">
+                                            ALCATRÃO
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="MADEIRA">
+                                        <label class="form-check-label" for="MADEIRA">
+                                            MADEIRA
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="BORRACHA">
+                                        <label class="form-check-label" for="BORRACHA">
+                                            BORRACHA
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="FLASH">
+                                        <label class="form-check-label" for="FLASH">
+                                            PISO FLASH
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="TERRA">
+                                        <label class="form-check-label" for="TERRA">
+                                            TERRA BATIDA
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="DURO">
+                                        <label class="form-check-label" for="DURO">
+                                            PISO DURO
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                    <h6>TIPO DE CAMPO</h6>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="INDOOR">
+                                        <label class="form-check-label" for="INDOOR">
+                                            INDOOR
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="OUTDOOR">
+                                        <label class="form-check-label" for="OUTDOOR">
+                                            OUTDOOR
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                    <h6>PESQUISAR POR</h6>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="RECOMENDADO">
+                                        <label class="form-check-label" for="RECOMENDADO">
+                                            RECOMENDADO
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="AVALRECOM">
+                                        <label class="form-check-label" for="AVALIAÇÃO">
+                                            AVALIAÇÃO/RECOMENDAÇÃO
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="PREÇORECOM">
+                                        <label class="form-check-label" for="PREÇO">
+                                            PREÇO/RECOMENDAÇÃO
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="DISRECOM">
+                                        <label class="form-check-label" for="DISTÂNCIA">
+                                            DISTÂNCIA/RECOMENDAÇÃO
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="DISTÂNCIA">
+                                        <label class="form-check-label" for="DISTÂNCIA">
+                                            DISTÂNCIA/RECOMENDAÇÃO
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="AVALIAÇÃO">
+                                        <label class="form-check-label" for="AVALIAÇÃO">
+                                            APENAS AVALIAÇÃO
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="DISTÂNCIA">
+                                        <label class="form-check-label" for="DISTÂNCIA">
+                                            APENAS DISTÂNCIA
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="button-container">
+                                <button class="button_window" onclick="LimparFiltro()">LIMPAR</button>
+                                <button class="button_window" onclick="AplicarFiltro()">APLICAR</button>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+
+    <div class="section">
+        <div class="container" id="recintos">
+            
+          
+        </div>
+      </div>
+
+       
+
+
+    
+	<script src="../baseDados.js"></script>
+	<script src="../js/bootstrap.bundle.min.js"></script>
+	<script src="../js/tiny-slider.js"></script>
+	<script src="../js/aos.js"></script>
+	<script src="../js/navbar.js"></script>
+	<script src="../js/counter.js"></script>
+	<script src="../js/custom.js"></script>
+    <script src="../bd/localStorage.js"></script>
+    <script src="listaCampos.js"></script>
+    <footer>
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+        <div class="footer-clean">
+            <footer>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-sm-4 col-md-3 item">
+                            
+                            <ul>
+                                <img src="../footer/act3.png" alt="Footer Image" height="50" width="100">
+                                <br>
+                                <!-- <li><a href="#">Web design</a></li>
+                                <li><a href="#">Development</a></li> -->
+                                <li><a href="#">Sobre Nós</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4 col-md-3 item">
+                            <h3>Área Cliente</h3>
+                            <ul>
+                                <li><a href="#">A sua conta</a></li>
+                                <li><a href="#">Reservas</a></li>
+                                <li><a href="#">Registo/Entrar</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4 col-md-3 item">
+                            <h3>Ajuda</h3>
+                            <ul>
+                                <li><a href="#">Contacte-nos</a></li>
+                                
+                            </ul>
+                        </div>
+                        <div class="col-lg-3 item social"><a href="#"><i class="fa-brands fa-facebook fa-xl"></i></a><a href="#"><i class="fa-brands fa-linkedin fa-xl"></i></a><a href="#"><i class="fa-brands fa-instagram fa-xl"></i></a><a href="#"><i class="fa-brands fa-twitter fa-xl"></i></a>
+                            <p class="copyright">Activities4All © 2023 - PW</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    </body>
+    </footer>
+</body>
+
+</html>

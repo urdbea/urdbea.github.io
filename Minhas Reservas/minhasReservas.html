@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>As minhas reservas</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <link rel="shortcut icon" href="../images/logo.png" style="width: max-content;">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+
+
+  <script src="minhasReservas.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"
+    integrity="sha512-WPtdqlctM92AaJX50S+bnz4rqfUb24D4ov/f4Q4J/n4j+LOeGNL8gJt9h3Kn/RsIUm1s2tTJgWfTTcMDHkGJjg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <link rel="stylesheet" href="../fonts/icomoon/style.css">
+  <link rel="stylesheet" href="../fonts/flaticon/font/flaticon.css">
+
+  <link rel="stylesheet" href="../css/tiny-slider.css">
+  <link rel="stylesheet" href="../css/aos.css">
+
+
+  <link rel="stylesheet" href="minhasReservas.css">
+  <script src="https://kit.fontawesome.com/09d8ff6fff.js" crossorigin="anonymous"></script>
+
+
+
+</head>
+
+<body>
+
+  <!--NAVIGATION BAR-->
+
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="../images/logoActivities4all.png" alt="Your Image" style="height: 100px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link " href="#">Recintos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="#minhasReservas">Minhas Reservas</a>
+          </li>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <li class="nav-item">
+
+            <div class="image-container">
+              <img class="fotoPerfil" src="../images/person_1-min.jpg" id="image">
+              <div class="dropdown">
+                <ul>
+                  <li>
+                    <span class="label-label-perfil" style="font-size: 14px; margin-top: 10px;"><img class="fotoPerfil2"
+                        src="../images/person_1-min.jpg" id="image"> Ricardo Vaz</span>
+                  </li>
+                  <li><a href="">Dados Pessoais</a></li>
+                  <li><a href="">Terminar Sessão</a></li>
+                </ul>
+              </div>
+            </div>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <br><br>
+
+
+
+  <div class="grid-container">
+    <div class="col-md-12">
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-1"> </div>
+          <div class="col-lg-10">
+            <h3>As minhas reservas</h3>
+            <br>
+            <div class="conteudo">
+              <table class="table table-hover">
+                <thead class="cabecalho">
+                  <tr classe="cabecalhoColuna">
+                    <th scope="col"> </th> <!-- coluna pra meter os icons -->
+                    <th scope="col">Atividade</th>
+                    <th scope="col">Responsável</th>
+                    <th scope="col">Localização</th>
+                    <th scope="col">Estado</th>
+                    <th scope="col">Data</th>
+                    <th scope="col"> </th> <!--coluna para meter o botao, ele clica e abre os detalhes-->
+                  </tr>
+                </thead>
+                <tbody id="tabelaMinhasReservas">
+
+                </tbody>
+              </table>
+
+            </div>
+          </div>
+          <div class="col-sm-1"> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!--FOOTER COMEÇA AQUI-->
+
+  <div class="rodape">
+    <footer>
+      <div class="conteudo-rodape">
+        <div class="row">
+          <div class="col-sm-4"
+            style="display: inline-block; vertical-align: middle; text-align: center; margin-left: calc(50% - [text width]/2);">
+            <img src="../images/logoblack.png" alt="Your Image" style="height: 80px;">
+          </div>
+          <div class="col-sm-4"
+            style="display: inline-block; text-align: center; margin-left: calc(50% - [text width]/2);">
+            <p class="titulo-rodape">Área Cliente</p>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">A sua Conta</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Reservas</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Registo/ Entrar</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-4"
+            style="display: inline-block; text-align: center; margin-left: calc(50% - [text width]/2);">
+            <p class="titulo-rodape">Ajuda</p>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Contacte-nos</a> </li>
+              <li class="nav-item mb-2"><i class="fa-brands fa-facebook fa-xl"></i> <i
+                  class="fa-brands fa-linkedin fa-xl"></i> <i class="fa-brands fa-instagram fa-xl"></i> <i
+                  class="fa-brands fa-twitter fa-xl"></i> <i class="fa-brands fa-reddit fa-xl"></i></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!--FOOTER ACABA AQUI-->
+
+
+
+
+
+  <script src="minhasReservas.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"
+    integrity="sha512-WPtdqlctM92AaJX50S+bnz4rqfUb24D4ov/f4Q4J/n4j+LOeGNL8gJt9h3Kn/RsIUm1s2tTJgWfTTcMDHkGJjg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>
